@@ -110,7 +110,6 @@ Follow these instructions to get the backend server up and running on your local
 
 ## API Endpoints
 
-*(Provide a brief overview of your main API endpoints here. You might want to expand this with more details like request methods, parameters, and example responses later.)*
 
 **Authentication:**
 * `POST /api/auth/register`: Register a new user.
