@@ -7,10 +7,10 @@ const {
 
 const authMiddleware = require('../middleware/auth.middleware');
 
-const router = express.Router();
+const scoreRouter = express.Router();
 
-router.post('/', authMiddleware, submitScore);
-router.get('/leaderboard/:level', getLeaderboard);
-router.get('/me', authMiddleware, getMyScores);
+scoreRouter.post('/', authMiddleware, submitScore);
+scoreRouter.get('/leaderboard/:level', getLeaderboard);
+scoreRouter.get('/me', authMiddleware, getMyScores);
 
-module.exports = router;
+module.exports = scoreRouter;

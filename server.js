@@ -2,19 +2,25 @@ const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
 
-const authRoutes = require('./routes/auth.routes.js');
-const scoreRoutes = require('./routes/score.routes.js');
+
 const connectDB = require('./config/db.js');
+const authRouter = require('./routes/auth.routes.js');
+const scoreRouter = require('./routes/score.routes.js');
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: 'https://flipcard-game-1-0.netlify.app',
+  credentials: true
+}));
+
 app.use(express.json());
+app.options('*', cors()); // (optional) allow pre-flight
 
 connectDB();
 
-app.use('/api/auth', authRoutes);
-app.use('/api/scores', scoreRoutes);
+app.use('/api/auth', authRouter);
+app.use('/api/scores', scoreRouter);
 
 
 
