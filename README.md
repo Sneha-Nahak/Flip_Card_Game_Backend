@@ -22,7 +22,6 @@ This repository contains the backend for the Flip Card Game application. It is b
 * User authentication (registration, login)
 * Secure password hashing
 * Score submission and retrieval
-* Game state management (if applicable)
 * RESTful API design
 
 ## Technologies Used
